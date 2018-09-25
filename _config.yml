@@ -32,7 +32,7 @@ google-analytics:
 
 # Disqus
 disqus:
-  id:               "Dec7Disqus"
+  id:               "dec7-ghpages"
 
 # URL
 url:                "https://dec7.github.io" # the base hostname & protocol for your site
