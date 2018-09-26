@@ -55,4 +55,34 @@ share: true
   - ```git push {remote} {tagname}```
     - ```git push origin --tags```
 - ```git config --global alias.unstate 'reset HEAD --'```
-- 
+
+## ch3
+- ```git branch testing```
+- ```git checkout testing```
+  - ```HEAD```
+- ```git checkout -b hotfix```
+- ```git branch```
+  - ```git branch -v```
+  - ```git branch --merged```
+    - ```git branch -d {branchname}``` 
+  - ```git branch --no-merged```
+    - ```git branch -D {branchname}```
+- ```git fetch origin```
+- ```git push origin serverfix:serverfix```
+  - ```refs/heads/serverfix:refs/heads/serverfix```
+- ```git merge origin/serverfix```
+  - ```git checkout -b serverfix origin/serverfix```
+  - ```git checkout -b {branch} {remotename/branch}```
+  - ```git checkout --track {remotename/branch}```
+- ```git push {remotename} :{branch}```
+  - ```git push {remotename} {localbracnh}:{remotebranch}```
+- ```git rebase --onto master A B```
+    - ```git checkout master, git merge B```
+    - ```git rebase master A```
+    - ```git checkout master, git merge A```
+
+
+## ch4
+
+
+## ch5
