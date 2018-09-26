@@ -81,8 +81,27 @@ share: true
     - ```git rebase master A```
     - ```git checkout master, git merge A```
 
-
-## ch4
-
-
 ## ch5
+- ```git rebase -i {수정을 시장할 이전커밋}```
+- ```git request-pull orgin/master myfork```
+- ```git merge --no-commit --squash featureB```
+- ```git format-patch```
+  - ```git format-patch -M origin/master```
+- ```git send-email *.patch```
+- ```git apply /tmp/patch-ruby-client.patch```
+  - - ```git apply --check```   
+- ```git am {patchname}.patch```
+  - ```git am --resolved```
+  - ```git am -3 {patchname}.patch```
+- ```git log contrib --not master```
+  - ```git log -p```
+  - ```git diff master```
+    - ```git merge-base {target-branch} master```
+    - ```gif diff {조상커밋}```
+- ```git diff master...{target-branch}```
+- ```git cherry-pick {checksum}```
+
+## ch6
+
+
+
