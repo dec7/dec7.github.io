@@ -15,10 +15,7 @@ share: true
 
 ## Ch2
 - ```git status```
-  - 파일 상태 확인
 - ```git add```
-  - 새로운 파일 추적
-  - 아규먼트: 파일, 디렉토리 (하위 재귀적 포함)
 - ```git init```
 - ```git clone```
 - ```git diff```
@@ -102,6 +99,45 @@ share: true
 - ```git cherry-pick {checksum}```
 
 ## ch6
-
+- ```git log --abbrev-commit```
+- ```git rev-parse {branchname}```
+- ```git reflog``
+- ```git show HEAD@{4}```
+- ```git show master@{yesterday}```
+- ```git log -g```
+- ```git show HEAD^```
+- ```git show HEAD~```
+- ```git log master..experiment```
+  - ```git log refA..refB```
+  - ```git log ^refA refB```
+  - ```git log refB --not refA```
+  - ```git log refA refB ^refC```
+  - ```git log refA refB --not refC```
+- ```git log master...experiment```
+  - ```git log --left-right master...experiment```
+- ```git add -i```
+- ```git stash```
+  - ```git stash list```
+  - ```git stash apply```
+  - ```git stash drop```
+  - ```git stash pop```
+  - ```git stash branch {branchname}```
+- ```git commit --amend```
+- ```git rebase -i HEAD~3```
+  - ```git rebase --continue```
+- ```git filter-branch --tree-filter 'rm -f password.txt' HEAD```
+- ```git filter-branch --subdirectory-filter truck HEAD```
+- ```git blame -- {filename}```
+- ```git bisect start```
+  - ```git bisect bad```
+  - ```git bisect good {good commit}```
+  - ```git bisect [good|bad]```
+  - ```git bisect reset```
+- ```git submodule add {repo-url} {directory-name}```
+  - ```git diff -cached {directory-name}```
+  - ```git submodule init```
+  - ```git submodule update```
+- ```git read-tree --prefix={directory}/ -u {branch_name}```
+- ```git diff-tree -p {branch_name}```
 
 
