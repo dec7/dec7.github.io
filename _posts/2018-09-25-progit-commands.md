@@ -140,4 +140,13 @@ share: true
 - ```git read-tree --prefix={directory}/ -u {branch_name}```
 - ```git diff-tree -p {branch_name}```
 
-
+## ch7
+- ```git config --global commit.template #HOME/.gitmessage.txt```
+- ```git config --global core.pager [''|less|more]```
+- ```git config --global user.signingkey {gpg-key_id}```
+- ```git config --global color.ui [true|false|always]```
+- ```git config --global core.autocrlf true```
+- ```git config --global core.whitespace trailing-space,space-before-tab,indent-with-non-tab```
+- ```git config --system receive.fsckObjects true```
+- ```git config --system receive.denyNonFastForwards true```
+- ```git config --system receive.denyDeletes true```
