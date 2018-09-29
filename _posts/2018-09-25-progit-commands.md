@@ -150,3 +150,23 @@ share: true
 - ```git config --system receive.fsckObjects true```
 - ```git config --system receive.denyNonFastForwards true```
 - ```git config --system receive.denyDeletes true```
+
+## ch9
+```echo 'test content' | git hash-object --stdin```
+```git cat-file -p {checksum}```
+  - ```git cat-file -t {checksum}```
+  - ```git cat-file -p master^{tree}```
+- ```git update-index --add --cacheinfo 100644 {checksum} test.txt```
+- ```git write-tree```
+- ```echo 'first commit' | git commit-tree {checksum}```
+- ```git update-ref refs/heads/master {checksum}```
+- ```git symbolic-ref HEAD```
+  - ```git symbolic-ref HEAD refs/heads/test```
+  - ```git update-ref refs/tags/v1.0 {checksum}```
+- ```git gc```
+- ```git verify-pack -v {idx파일 위치}```
+- ```git fsck --full```
+- ```git count-objects -v```
+- ```git rev-list --objects --all | grep {checksum}```
+- ```git filter-branch --index-filter 'git rm --cached --ignore-unmatch git.tbz2' -- {checksum}^..```
+- ```git prune --expire```
